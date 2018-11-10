@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Udacity Full Stack Nanodegree Project 5 - Neighborhood Map</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            function setHeight() {
+                windowHeight = $(window).innerHeight();
+                $('#map').css('min-height', windowHeight);
+                $('#navbar').css('min-height', windowHeight);
+            };
+            
+            setHeight();
+
+            $(window).resize(function() {
+                setHeight();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar-color col-2 collapse bg-inverse padding-top-20 h-100 navbar-width" id="navbar"  style="background-color: #46c287 !important">
+                <h5 class="text-white">Neighborhood Map</h4>
+                <!-- Search Input -->
+                <input class="search" data-bind="textInput: userInput, valueUpdate: 'afterkeydown'" placeholder="Enter A Location...">
+                
+                <ul class="nav flex-column" data-bind="foreach: searchFilter">
+                    <a href="#"><li class="nav-item text-white location-info" data-bind="text: title, click: $parent.markerClickListener"></li></a>
+                </ul>
+            </nav>
+            <main class="navbar-color col p-0 navbar-inverse">
+                <a href class="navbar-color float-left m-3" data-target="#navbar" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="navbar-color content bg-inverse" style="background-color: #46c287 !important">
+                    <!-- Map Content -->
+                    <div id="map">
+                        <!-- Map -->
+                        <p class="map-error"></p>
+                    </div>
+                </div>
+            </main>
+            
+        </div>
+    </div>
+
+    <script
+        src="js/knockout-3.4.2.js" charset="utf-8">
+    </script>
+
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+    </script>
+
+    <script
+        src="js/styles.js" charset="utf-8">
+    </script>
+
+    <script
+        src="js/main.js" charset="utf-8">
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyA3s_XXgie3QXwUK05-qcDFCmlCyzKeLjU&callback=app"
+        onerror="onMapsError()">
+    </script>
+</body>
+</html>

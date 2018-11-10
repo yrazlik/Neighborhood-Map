@@ -1,0 +1,144 @@
+.navbar-color {
+  background-color: #46c287 !important;
+}
+
+.navbar-width {
+    min-width: 300px;
+}
+
+.location-info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5xp;
+    padding-right: 5px;
+}
+
+.popup-title {
+    font-size: 1.5em;
+}
+
+.popup-subtitle {
+    font-size: 1.2em;
+}
+
+.popup-address-title {
+    padding-bottom: 1px;
+    font-size: 1em;
+}
+
+.popup-address {
+    margin-bottom: 1px;
+    font-size: .85em;
+}
+
+.popup-container {
+    background: #6abf8c;
+    padding: 5px;
+}
+
+.search {
+    width: 100%;
+    font-size: 1em;
+    padding: 5px;
+}
+
+.padding-top-20 {
+  padding-top: 20px !important;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  padding: 15px;
+  margin: 15px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .search {
+        font-size: .85em;
+        margin-top: 5px;
+    }
+
+    .navbar-width {
+      min-width: 150px;
+    }
+
+    .location-info {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 5xp;
+      padding-right: 5px;
+    }
+
+    .location-info {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 5xp;
+      padding-right: 5px;
+    }
+
+    .popup-title {
+      font-size: 1em;
+    }
+
+    .popup-subtitle {
+      font-size: .85em;
+    }
+
+    .popup-address-title {
+      padding-bottom: 1px;
+      font-size: .85em;
+    }
+
+    .popup-address {
+      margin-bottom: 1px;
+      font-size: .75em;
+    }
+
+    .popup-container {
+      background: #6abf8c;
+      padding: 3px;
+    }
+
+    .search {
+      width: 100%;
+      font-size: 1em;
+      padding: 5px;
+    }
+
+    .loader {
+      border: 12px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 12px solid #3498db;
+      width: 90px;
+      height: 90px;
+      padding: 8px;
+      margin: 8px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+}
+
+.map-error {
+    color: white;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    width: 100%;
+}
